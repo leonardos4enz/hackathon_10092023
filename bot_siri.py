@@ -1,4 +1,4 @@
-# Bot Siri
+# Bot Siri, escucha y se espera registrar palabras clave para mostrar publicidad
 
 import speech_recognition as sr
 import pyttsx3

