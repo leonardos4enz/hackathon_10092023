@@ -46,6 +46,7 @@ def check_all_messages(message):
     
 def unknown ():
     response = ['puedes decirlo de nuevo?', 'No estoy seguro de lo que quieres', 'búscalo en goole a ver que tal'][random.randrange(3)]
+    return response
 
 
 while True:
