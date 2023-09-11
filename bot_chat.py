@@ -30,16 +30,17 @@ def message_probability(user_message, recognized_words, single_response=False, r
 def check_all_messages(message):
         highest_prob = {}
         
-        def response(bot_response, list_of_words, single_response = False, required_words = []):
+        def response(bot_response, list_of_words, single_response=False):
             nonlocal highest_prob
-            highest_prob[bot_response] = message_probability(message, list_of_words, single_response, required_words)
+            highest_prob[bot_response] = message_probability(message, list_of_words, single_response)
+
         response('Hola', ['hola', 'klk', 'saludos', 'buenas'], single_response = True)
-        response('Estoy bien y tu?', ['como', 'estas', 'va', 'vas', 'sientes'], required_word=['como'])
+        response('Estoy bien y tu?', ['como', 'estas', 'va', 'vas', 'sientes'])
         response('Estamos ubicados en la calle 23 numero 123', ['ubicados', 'direccion', 'donde', 'ubicacion'], single_response=True)
         response('Siempre a la orden', ['gracias', 'te lo agradezco', 'thanks'], single_response=True)
 
         best_match = max(highest_prob, key=highest_prob.get)
-        print(highest_prob)
+        #print(highest_prob)
 
         return unknown() if highest_prob[best_match] < 1 else  best_match
     
